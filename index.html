@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phil Stricker</title>
+  <meta name="description" content="Phil Stricker - Software engineer. Personal site and blog.">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/variables.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/blog.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="site-logo">phil stricker</a>
+      <nav class="site-nav">
+        <a href="/">home</a>
+        <a href="/blog.html">blog</a>
+        <a href="https://github.com/pstricker" target="_blank" rel="noopener">github</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <p class="hero-greeting">Hi, I'm</p>
+        <h1 class="hero-name">Phil Stricker</h1>
+        <p class="hero-tagline">Software engineer building things for the web.</p>
+      </div>
+    </section>
+
+    <section class="social-links">
+      <div class="container">
+        <a href="https://github.com/pstricker" target="_blank" rel="noopener" class="social-link">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="mailto:stricker.phil@gmail.com" class="social-link">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
+          Email
+        </a>
+      </div>
+    </section>
+
+    <section class="recent-posts">
+      <div class="container">
+        <h2 class="section-title">Recent Posts</h2>
+        <div id="recent-posts-container">
+          <noscript><p class="text-muted">Enable JavaScript to see recent posts.</p></noscript>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>&copy; 2026 Phil Stricker</span>
+      <span>Built with plain HTML, CSS &amp; JS</span>
+    </div>
+  </footer>
+
+  <script type="module">
+    import { formatDate } from '/js/utils.js';
+
+    async function loadRecentPosts() {
+      const container = document.getElementById('recent-posts-container');
+      try {
+        const res = await fetch('/posts/posts.json');
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const posts = await res.json();
+        const recent = posts.filter(p => !p.draft).slice(0, 3);
+
+        if (recent.length === 0) {
+          container.innerHTML = '<p class="text-muted">No posts yet. Check back soon.</p>';
+          return;
+        }
+
+        container.innerHTML = recent.map(post => `
+          <a href="/post.html?slug=${post.slug}" class="post-card">
+            <time datetime="${post.date}">${formatDate(post.date)}</time>
+            <h3>${post.title}</h3>
+            <p>${post.excerpt}</p>
+          </a>
+        `).join('');
+      } catch {
+        container.innerHTML = '<p class="text-muted">No posts yet. Check back soon.</p>';
+      }
+    }
+
+    loadRecentPosts();
+  </script>
+</body>
+</html>

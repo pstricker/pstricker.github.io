@@ -1,0 +1,7 @@
+{
+  "slug": "hello-world",
+  "title": "Hello, World",
+  "date": "2026-03-01",
+  "tags": ["personal"],
+  "body": "## Welcome\n\nThis is my corner of the internet. I'm Phil — a software engineer who enjoys building things for the web.\n\nI built this site with plain HTML, CSS, and JavaScript. No frameworks, no build tools. Blog posts are stored as JSON files with Markdown content, rendered client-side.\n\n### What you'll find here\n\n- Notes on things I'm building\n- Thoughts on software engineering\n- The occasional side project writeup\n\n```js\nconsole.log('Hello, world!');\n```\n\nThanks for stopping by."
+}

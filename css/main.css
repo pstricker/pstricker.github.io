@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Layout */
+
+.container {
+  width: 100%;
+  max-width: var(--max-width-page);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+main {
+  flex: 1;
+}
+
+/* Header / Nav */
+
+.site-header {
+  padding: var(--space-lg) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-logo {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-text);
+  transition: color var(--transition-fast);
+}
+
+.site-logo:hover {
+  color: var(--color-accent);
+}
+
+.site-nav {
+  display: flex;
+  gap: var(--space-lg);
+}
+
+.site-nav a {
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+  color: var(--color-accent);
+}
+
+/* Footer */
+
+.site-footer {
+  padding: var(--space-xl) 0;
+  border-top: 1px solid var(--color-border);
+  margin-top: var(--space-3xl);
+}
+
+.site-footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.site-footer a {
+  color: var(--color-text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.site-footer a:hover {
+  color: var(--color-accent);
+}
+
+/* Links */
+
+a {
+  color: var(--color-accent);
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-accent-hover);
+}
+
+/* Responsive */
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 var(--space-md);
+  }
+
+  .site-header .container {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .site-footer .container {
+    flex-direction: column;
+    gap: var(--space-sm);
+    text-align: center;
+  }
+}

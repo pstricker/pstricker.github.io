@@ -1,0 +1,10 @@
+[
+  {
+    "slug": "hello-world",
+    "title": "Hello, World",
+    "date": "2026-03-01",
+    "excerpt": "First post. A quick intro and what to expect from this site.",
+    "tags": ["personal"],
+    "draft": false
+  }
+]
