@@ -1,7 +1,20 @@
+/* Profile Photo */
+
+.profile-photo {
+  padding-top: var(--space-3xl);
+}
+
+.profile-img {
+  max-width: 280px;
+  margin: 0 auto;
+  border-radius: var(--radius-md);
+}
+
 /* Hero */
 
 .hero {
-  padding: var(--space-3xl) 0 var(--space-2xl);
+  padding: var(--space-2xl) 0 var(--space-2xl);
+  text-align: center;
 }
 
 .hero-greeting {
