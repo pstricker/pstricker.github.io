@@ -14,15 +14,7 @@
   <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11/build/highlight.min.js"></script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <a href="/" class="site-logo">Phil Stricker</a>
-      <nav class="site-nav">
-        <a href="/">home</a>
-        <a href="/blog.html">blog</a>
-      </nav>
-    </div>
-  </header>
+  <header id="site-header"></header>
 
   <main>
     <div class="container">
@@ -32,13 +24,12 @@
     </div>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <span>&copy; 2026 Phil Stricker</span>
-      <span>Built with plain HTML, CSS &amp; JS</span>
-    </div>
-  </footer>
+  <footer id="site-footer"></footer>
 
+  <script type="module">
+    import { initComponents } from '/js/components.js';
+    initComponents();
+  </script>
   <script type="module" src="/js/post.js"></script>
 </body>
 </html>
