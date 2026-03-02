@@ -10,7 +10,7 @@ async function loadPost() {
   }
 
   try {
-    const res = await fetch(`/posts/${slug}.json`);
+    const res = await fetch(`/posts/${slug}.json`, { cache: 'no-cache' });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const post = await res.json();
 

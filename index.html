@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Phil Stricker</title>
   <meta name="description" content="Phil Stricker - Software engineer. Personal site and blog.">
-  <link rel="stylesheet" href="/css/reset.css">
-  <link rel="stylesheet" href="/css/variables.css">
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" href="/css/blog.css">
+  <link rel="stylesheet" href="/css/reset.css?v=1">
+  <link rel="stylesheet" href="/css/variables.css?v=1">
+  <link rel="stylesheet" href="/css/main.css?v=1">
+  <link rel="stylesheet" href="/css/blog.css?v=1">
 </head>
 <body>
   <header id="site-header"></header>
@@ -72,7 +72,7 @@
     async function loadRecentPosts() {
       const container = document.getElementById('recent-posts-container');
       try {
-        const res = await fetch('/posts/posts.json');
+        const res = await fetch('/posts/posts.json', { cache: 'no-cache' });
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const posts = await res.json();
         const recent = posts.filter(p => !p.draft).slice(0, 3);
