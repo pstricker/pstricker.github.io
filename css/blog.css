@@ -101,6 +101,7 @@
 
 .social-links .container {
   display: flex;
+  justify-content: center;
   gap: var(--space-md);
 }
 
