@@ -1,3 +1,10 @@
 [
-  
+  {
+    "slug": "building-with-claude-code",
+    "title": "Building This Site with Claude Code (Yes, Including This Post)",
+    "date": "2026-03-02",
+    "excerpt": "A meta look at how I used Claude Code to build and style this site — from the initial scaffold to this very post, prompts included.",
+    "tags": ["ai", "claude-code", "web-dev", "meta"],
+    "draft": false
+  }
 ]
