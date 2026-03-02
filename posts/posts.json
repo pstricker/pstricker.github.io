@@ -1,5 +1,13 @@
 [
   {
+    "slug": "hosting-on-github-pages-with-namecheap",
+    "title": "How This Site Is Hosted for ~$12 a Year",
+    "date": "2026-03-02",
+    "excerpt": "GitHub Pages handles the hosting for free. Namecheap sells the domain for about $12. That's the whole bill. Here's exactly how it works.",
+    "tags": ["hosting", "github-pages", "namecheap", "devops"],
+    "draft": false
+  },
+  {
     "slug": "building-with-claude-code",
     "title": "Building This Site with Claude Code (Yes, Including This Post)",
     "date": "2026-03-02",
