@@ -4,7 +4,7 @@ const container = document.getElementById('posts-container');
 
 async function loadPosts() {
   try {
-    const res = await fetch('/posts/posts.json');
+    const res = await fetch('/posts/posts.json', { cache: 'no-cache' });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const posts = await res.json();
     const published = posts.filter(p => !p.draft);
