@@ -44,9 +44,13 @@ function initAnalytics() {
   document.head.appendChild(script);
 
   window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
+  window.gtag = function() { dataLayer.push(arguments); };
   gtag('js', new Date());
-  gtag('config', GA_ID);
+
+  // On post pages, suppress the automatic page_view so post.js can fire
+  // it manually after the post loads, with the correct title and full URL.
+  const isPostPage = window.location.pathname.endsWith('post.html');
+  gtag('config', GA_ID, { send_page_view: !isPostPage });
 }
 
 export function initComponents() {

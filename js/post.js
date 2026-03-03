@@ -15,6 +15,10 @@ async function loadPost() {
     const post = await res.json();
 
     document.title = `${post.title} - Phil Stricker`;
+    gtag('event', 'page_view', {
+      page_title: document.title,
+      page_location: window.location.href,
+    });
 
     const postUrl = `https://philstricker.com/post.html?slug=${slug}`;
     const setMeta = (selector, attr, value) => {
