@@ -1,5 +1,13 @@
 [
   {
+    "slug": "claude-code-subagents",
+    "title": "Claude Code Has Interns Now (They're Also Claude)",
+    "date": "2026-04-17",
+    "excerpt": "Claude Code can spin up specialized sub-agents to do your bidding. I watched it happen in real time and now I understand what's going on.",
+    "tags": ["ai", "claude-code", "agents", "meta"],
+    "draft": false
+  },
+  {
     "slug": "hosting-on-github-pages-with-namecheap",
     "title": "How This Site Is Hosted for ~$12 a Year",
     "date": "2026-03-02",
