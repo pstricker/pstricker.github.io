@@ -1,5 +1,13 @@
 [
   {
+    "slug": "building-claude-agent-teams",
+    "title": "Building Agent Teams with Claude (Not Just Watching Them)",
+    "date": "2026-04-17",
+    "excerpt": "The last post explained how Claude Code uses subagents. This one shows you how to build the same pattern yourself with the Anthropic SDK — orchestrators, workers, parallel runs, and all.",
+    "tags": ["ai", "claude-api", "agents", "python"],
+    "draft": false
+  },
+  {
     "slug": "claude-code-subagents",
     "title": "Claude Code Has Interns Now (They're Also Claude)",
     "date": "2026-04-17",
