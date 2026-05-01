@@ -1,5 +1,13 @@
 [
   {
+    "slug": "building-rimshot",
+    "title": "I'm Learning Drums. So Naturally I Wrote the Software.",
+    "date": "2026-05-01",
+    "excerpt": "What starts as picking up drumsticks usually ends with evaluating MIDI libraries for .NET. At least for me.",
+    "tags": ["dotnet", "csharp", "midi", "music", "side-project"],
+    "draft": false
+  },
+  {
     "slug": "building-claude-agent-teams",
     "title": "Building Agent Teams with Claude (Not Just Watching Them)",
     "date": "2026-04-17",
