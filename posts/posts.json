@@ -1,5 +1,13 @@
 [
   {
+    "slug": "rimshot-progress",
+    "title": "Rimshot Grew Up: Rudiments, Loops, and Real Songs",
+    "date": "2026-05-04",
+    "excerpt": "A few days after the build post, Rimshot has a rudiments library, practice loops, and full-song MIDI playback. My timing is tighter, my songs are more or less songs, and I have opinions about hi-hat indicators.",
+    "tags": ["dotnet", "csharp", "midi", "music", "side-project"],
+    "draft": false
+  },
+  {
     "slug": "building-rimshot",
     "title": "I'm Learning Drums. So Naturally I Wrote the Software.",
     "date": "2026-05-01",
